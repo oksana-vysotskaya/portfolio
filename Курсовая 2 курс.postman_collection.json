@@ -1,0 +1,1024 @@
+{
+	"info": {
+		"_postman_id": "144d2e8c-1736-4467-b00a-7109ace09987",
+		"name": "Курсовая 2 курс",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28279256"
+	},
+	"item": [
+		{
+			"name": "Получение расписания",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689703820.0.0.0; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwMzgyMjI2NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"from\":\"2023-07-17T00:00:00+03:00\",\"till\":\"2023-07-24T00:00:00+03:00\",\"onlyTypes\":[]}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/events",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с пустым названием",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"\",\"startAt\":\"2024-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с названием более чем 40 символов",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"sdlkfjslkdjflksdjflkjsdlkfjsldkjflsdjflksdjflksdjlkfjsdkljflssdlfjlskdfj\",\"startAt\":\"2024-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с названием из 40 символов",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventID\"\r",
+							"var value = pm.response.json().data.payload.id //Вместо id можно использовать другое поле  json\r",
+							"pm.collectionVariables.set(key, value)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"oxy asdkjhkashdkjahskjdhakjhdkahkdjhakjh\",\"startAt\":\"2023-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание личного события с названием от 2 до 39 символов",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventID\"\r",
+							"var value = pm.response.json().data.payload.id //Вместо id можно использовать другое поле  json\r",
+							"pm.collectionVariables.set(key, value)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"oxy asdkjhkashdkjahskjd\",\"startAt\":\"2023-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события без описания",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventID\"\r",
+							"var value = pm.response.json().data.payload.id //Вместо id можно использовать другое поле  json\r",
+							"pm.collectionVariables.set(key, value)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"oxy asdkjhkashdkjahskjd\",\"startAt\":\"2023-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события без дат",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"oxy asdkjhkashdkjahskjd\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события с описанием",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventID\"\r",
+							"var value = pm.response.json().data.payload.id //Вместо id можно использовать другое поле  json\r",
+							"pm.collectionVariables.set(key, value)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"ыаываывавыаывавы ываывавыы\",\"title\":\"oxy asdkjhkashdkjahskjd\",\"startAt\":\"2023-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705677.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"oxy пупупуууу222\",\"startAt\":\"2023-07-20T19:00:00+03:00\",\"endAt\":\"2023-07-20T19:30:00+03:00\",\"id\":{{EventID}},\"oldStartAt\":\"2023-07-20T19:00:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/updatePersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание событий, пересекающихся по времени",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventID\"\r",
+							"var value = pm.response.json().data.payload.id //Вместо id можно использовать другое поле  json\r",
+							"pm.collectionVariables.set(key, value)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNDQ5ODA1NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705275.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"backgroundColor\":\"#F4F5F6\",\"color\":\"#81888D\",\"description\":\"\",\"title\":\"oxy asdkjhkashdkjahskjd\",\"startAt\":\"2023-07-20T19:05:00+03:00\",\"endAt\":\"2023-07-20T19:35:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/createPersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление события",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api-teachers.skyeng.ru"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "global_id=YWVzLTEyOC1jYmM%3D.W44hyQFLEwH8O8bjCByuog%3D%3D.R1W6BAoDKDtm5PCp6noNiab94FiRtARgaC6JPnmR4FA%3D; session_global=t6q7qmpa264ldt62r8ek1of7b5; token_global={{Token}}; _ym_d=1689702641; _ga=GA1.1.194347865.1689702641; _ym_isad=2; session_teachers_cabinet=qb2uknsgku60piqtlj9nrm97b4; _ym_visorc=b; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6ImY2NWQ4YjhhLTYzZjUtNDY2YS04ZTNmLWI0MmVkOTRiMTg4NFIiLCJ1c2VySWQiOiIxNDcyMDA2OSIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4OTcwMjY1OTkzNiwibGFzdEV2ZW50VGltZSI6MTY4OTcwNTkzNzcxMCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1689702640.1.1.1689705977.0.0.0"
+					},
+					{
+						"key": "origin",
+						"value": "https://teachers.skyeng.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://teachers.skyeng.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":{{EventID}},\"startAt\":\"2023-07-20T19:00:00+03:00\"}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/v2/schedule/removePersonal",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"v2",
+						"schedule",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NzIwMDY5LCJpZGVudGl0eSI6InRlc3QudHN0MzIwQHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMyMEBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5ODU0NTg2NTY4IiwibmFtZSI6InRlc3QiLCJzdXJuYW1lIjpudWxsLCJlbWFpbCI6InRlc3QudHN0MzIwQHNreWVuZy5ydSIsInVpTGFuZ3VhZ2UiOiJydSIsImxvY2FsZSI6InJ1Iiwic2VydmljZUxvY2FsZSI6bnVsbCwidWFzIjozMCwiand0VHlwZSI6MSwianRpIjoiMVZZY2pQRGtrUGNlOFJUR1E1T3I1WkNjVjZCNkEyaGQiLCJicmFuZCI6bnVsbCwiZXhwIjoxNjkxNTk5NjY5LCJhSXNTdHJvbmciOnRydWUsImFUeXBlIjoiVVNFUk5BTUVfUEFTU1dPUkQiLCJhVGltZSI6MTY5MTUxMzI2OCwicm9sZXMiOlsiUk9MRV9URUFDSEVSX0NBTkRJREFURSIsIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEVfQkFTRV9BQ0NFU1MiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.0GG2zakuNGcsC299T-pR0wTajiZmdBjH32EkjKo4UeUmTun3isXgP_j8BaG5V1yxy-ZpUyTFjB0cLQTiidM5m7x8DTq31YcmoiGVrNHgV27CD-iIYyJerof71JgcFMy0aIbDuskuc_PezpBT29AmabLy5Mb3uwkiyioeCH3Eg1Sgg-FygT_PRbncvbvH30cWH5rqwnzXx6gs1yftJBdaiqueq7xWEi80mbz4syg7_riGT8JYee9S7-SM6au8enyn94gq2HW1Shrcnj6a6UqUiYcRTO3_4ZbWIYWu14LK-o6rjeg5FV7J_CaeeFKvkTGJz1W8er-zY8ZrxwZvv8dVbuFLE4k8mOKxeaOYJhAZwnmLD8ag2Tu9LmPgaJQeH7Ew010HJNq7VEe1T112y73QLvO_AbXEU3XdjejX92p3NY34HA_HQUv4q1icmBZ656EWefEABPYB-Yb3_wqsy9grKvzERoYsi5sodNUHUf6SPARlxMCyDzpq33aQT7bfrmKHxf1xLOBxn2d50Xatg-0COaf4GNbc7mTUi60rtgNRFB50D1DUxnidElIZCn-eMGjfl7GACrN3vYG5kuv75dFS16hfhjUgYhBtrZ5fR2bklyh5DDs0bZtQDqiWbrA8I1zBMml3iqdgxxJbU2VGBblUm-iod8ZlmyZsIkWiDMMbPDQ",
+			"type": "string"
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://api-teachers.skyeng.ru"
+		},
+		{
+			"key": "EventID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
